@@ -1,0 +1,43 @@
+services:
+  php      :
+    build         :
+      context: ../.docker/php
+    container_name: sf72_php
+    volumes       :
+      - ./:/var/www/html
+      - ../.docker/php/php.ini:/usr/local/etc/php/conf.d/php.ini
+      - ./var/cache:/var/www/html/var/cache
+    environment   :
+      - SYMFONY_ENV=dev
+      - TIMEZONE=${TIMEZONE:-Europe/Berlin}
+    expose        :
+      - "9000"
+    networks      :
+      - symfony
+
+  nginx    :
+    build         :
+      context: ../.docker/nginx
+    container_name: sf72_nginx
+    volumes       :
+      - ./:/var/www/html
+      - ../.docker/nginx/conf.d:/etc/nginx/conf.d
+    ports         :
+      - "8080:80"
+    depends_on    :
+      - php
+    networks      :
+      - symfony
+
+  composer:
+    image         : composer:lts
+    container_name: sf72_composer
+    volumes       :
+      - ./:/app
+    working_dir   : /app
+    entrypoint    : [ "composer" ]
+    networks      :
+      - symfony
+
+networks:
+  symfony:

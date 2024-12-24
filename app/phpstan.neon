@@ -1,0 +1,11 @@
+parameters:
+    level: 3
+
+    paths:
+        - src
+
+    bootstrapFiles:
+        - vendor/autoload.php
+
+    symfony:
+        containerXmlPath: var/cache/dev/App_KernelDevDebugContainer.xml

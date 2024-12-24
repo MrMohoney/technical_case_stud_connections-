@@ -1,0 +1,14 @@
+
+###> symfony/framework-bundle ###
+app/.env.local
+app/.env
+app/var/
+app/vendor/
+###< symfony/framework-bundle ###
+
+###> phpunit/phpunit ###
+app/phpunit.xml
+app/phpunit.result.cache
+###< phpunit/phpunit ###
+
+.idea/
