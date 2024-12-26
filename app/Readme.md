@@ -159,6 +159,16 @@ Si ves un error `403 Forbidden` al acceder a tu aplicación, verifica los permis
     sudo chmod -R 777 var/
 ```
 
+Si ves el siguiente error al ejecutar bin/console
+```bash
+    # /usr/bin/env: 'php\r': No such file or directory
+    # /usr/bin/env: use -[v]S to pass options in shebang lines
+
+   # Solución
+   sed -i 's/\r$//' bin/console
+   chmod +x bin/console
+```
+
 ## **Autor**
 
 Alberto José Posada Fernández.
