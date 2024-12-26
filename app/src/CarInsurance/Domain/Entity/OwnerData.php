@@ -73,4 +73,44 @@ class OwnerData extends Person
     public function isHolderTheOwner (): UnmappedStringValue {
         return $this->isHolderTheOwner;
     }
+
+    public function codActividad (): UnmappedStringValue {
+        return $this->codActividad;
+    }
+
+    public function codDocumento (): UnmappedStringValue {
+        return $this->codDocumento;
+    }
+
+    public function codError (): UnmappedStringValue {
+        return $this->codError;
+    }
+
+    public function codPais (): UnmappedStringValue {
+        return $this->codPais;
+    }
+
+    public function domicilio (): UnmappedStringValue {
+        return $this->domicilio;
+    }
+
+    public function empresa (): UnmappedStringValue {
+        return $this->empresa;
+    }
+
+    public function fecCarnet (): UnmappedStringValue {
+        return $this->fecCarnet;
+    }
+
+    public function fecNacimiento (): UnmappedStringValue {
+        return $this->fecNacimiento;
+    }
+
+    public function nroDocumento (): UnmappedStringValue {
+        return $this->nroDocumento;
+    }
+
+    public function subCodDocumento (): UnmappedStringValue {
+        return $this->subCodDocumento;
+    }
 }

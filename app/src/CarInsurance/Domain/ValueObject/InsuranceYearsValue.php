@@ -21,7 +21,7 @@ class InsuranceYearsValue
     }
 
     final public function value (): ?string {
-        if ( is_null( $this->value ) || is_null( $this->value[ 0 ] ) ) {
+        if ( is_null( $this->value ) || empty( $this->value[ 0 ] ) ) {
             return null;
         }
 
@@ -29,7 +29,7 @@ class InsuranceYearsValue
     }
 
     private function ensureIsValidInsuranceYears (): void {
-        if ( is_null( $this->value ) || is_null( $this->value[ 0 ] ) ) {
+        if ( is_null( $this->value ) || empty( $this->value[ 0 ] ) ) {
             return;
         }
 

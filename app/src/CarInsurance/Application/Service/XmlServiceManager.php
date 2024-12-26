@@ -10,8 +10,8 @@ use App\CarInsurance\Domain\Port\XmlFormatConverterInterface;
 
 class XmlServiceManager
 {
-    /** @var XmlFormatConverterInterface[]|null */
-    private ?array $converters;
+    /** @var XmlFormatConverterInterface[] */
+    private array $converters;
 
     public function __construct ( iterable $converters ) {
         foreach ( $converters as $converter ) {

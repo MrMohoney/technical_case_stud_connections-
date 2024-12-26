@@ -25,7 +25,7 @@ class GeneralDataMapper extends CarInsuranceMapper
         return GeneralData::create(
             new UnmappedStringValue( $data[ 'codMedAncl' ] ?? null ),
             YesNoValue::fromBool( $data[ 'holder' ] === 'CONDUCTOR_PRINCIPAL' ),
-            new YesNoValue( $data[ 'occasionalDriver' ?? null ] ),
+            new YesNoValue( $data[ 'occasionalDriver' ] ),
             new UnmappedStringValue( $data[ 'contrataAlgunPack' ] ?? null ),
             new UnmappedStringValue( $data[ 'cotizacion' ] ?? null ),
             new UnmappedStringValue( $data[ 'entornoOrigen' ] ?? null ),
