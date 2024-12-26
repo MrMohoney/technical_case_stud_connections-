@@ -83,7 +83,7 @@ class JsonDataAdapterTest extends TestCase
                         nivelLu          : null,
                         nivelRc          : null,
                         nroCochesFamilia : null,
-                        nroCondOca       : '0',
+                        nroCondOca       : 0,
                         nroOpera         : null,
                         nroRiesgo        : null,
                         pctOpera         : null,

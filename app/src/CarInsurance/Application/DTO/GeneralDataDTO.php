@@ -30,7 +30,7 @@ class GeneralDataDTO
         public ?string $nivelLu,
         public ?string $nivelRc,
         public ?string $nroCochesFamilia,
-        public ?string $nroCondOca,
+        public int $nroCondOca,
         public ?string $nroOpera,
         public ?string $nroRiesgo,
         public ?string $pctOpera,

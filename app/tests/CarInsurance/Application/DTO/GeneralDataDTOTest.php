@@ -41,7 +41,7 @@ class GeneralDataDTOTest extends TestCase
         $nivelLu           = 'testNivelLu';
         $nivelRc           = 'testNivelRc';
         $nroCochesFamilia  = 'testNroCochesFamilia';
-        $nroCondOca        = 'testNroCondOca';
+        $nroCondOca        = 1;
         $nroOpera          = 'testNroOpera';
         $nroRiesgo         = 'testNroRiesgo';
         $pctOpera          = 'testPctOpera';
